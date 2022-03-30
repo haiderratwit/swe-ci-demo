@@ -11,7 +11,7 @@ public class FizzBuzz
 	String processNumbers (int[] numList)
 	{
     	// Copy your code here
-		return "";
+		return "1";
 	}
 
 }
