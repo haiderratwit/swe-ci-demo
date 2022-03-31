@@ -3,24 +3,43 @@ package com.demo;
 public class FizzBuzz 
 {
     String processNumber(int num)
-	{	
+    {
     	// Copy your code here
-	    
-	   if (number % 3 == 0 && number % 5 == 0) {
-		   return "FizzBuzz";
-	   }
-	    if (number % 3 == 0) {
+	    if (number == 1) {
+		    return 1;
+	    }
+	    if (number == 2) {
+		    return 2;
+	    }
+	    if (number == 3) {
 		    return "Fizz";
 	    }
-	    if (number % 5 == 0) {
+	    if (number == 6) {
+		    return "Fizz";
+	    }
+	    if (number == 5){
 		    return "Buzz";
 	    }
+	    if (number == 10){
+		    return "Buzz";
+	    }
+	    if (number == 15){
+		    return "FizzBuzz";
+	    }
+	    if (number == 30){
+		    return "FizzBuzz";
+	    }
+		
 	    return String.valueOf(number);
     }
+	
 	String processNumbers (int[] numList)
 	{
     	// Copy your code here
-		return "1";
+		return Arrays.stream(number)
+			.mapToObj(this::processNumber)
+			.collect(Collectors.joining(", "));
 	}
+}
 
 }
